@@ -16,7 +16,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 > So this one will hopefully grow in time (today my heart doesn't beats
 > so much for PHP than before ~20 years...)!
 
-<br><br>
+<br>
 
 ### News
 * \[**2025-04-10**\] .. and uploaded the [first script](#rewritephp) in this repository.
