@@ -42,7 +42,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <img id="rewritephp" src="https://kekse.biz/github.php?override=github:php&draw&angle=3&size=56&fg=140,130,20&font=OpenSans&ro&readonly&v=48&h=48&text=%60rewrite.php%60" />
 </a>
 
-This script rewrites a HTTP query in some ways which are useful for [**me**](https://github.com/kekse1/v4/).
+This script cleans and rewrites HTTP querys in some ways which are useful for [**me**](https://github.com/kekse1/v4/).
 
 * [Version v**0.3.0**](src/rewrite.php) (published **2025-04-10**)
 
