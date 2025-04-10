@@ -19,7 +19,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <br><br>
 
 ### News
-* \[**2025-04-10**\] .. and uploaded the first script in this repository.
+* \[**2025-04-10**\] .. and uploaded the [first script](#rewritephp) in this repository.
 * \[**2025-04-10**\] Just created this repository.
 
 <br><br>
@@ -41,6 +41,18 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <a href="src/rewrite.php">
 <img id="rewritephp" src="https://kekse.biz/github.php?override=github:php&draw&angle=3&size=56&fg=140,130,20&font=OpenSans&ro&readonly&v=48&h=48&text=%60rewrite.php%60" />
 </a>
+
+* [Version v**0.3.0**](src/rewrite.php) (published **2025-04-10**)
+
+```
+//mit erklaerung: ich wollte das selbst sauber loesen,
+//ohne integrierte php-funktionalitaet. grund: meine
+//website und anderes interpretieren den query-string
+//selbst.. da brauch ich 'ne "saubere" loesung quasi..
+//bspw. koennen bei mir auch verteilt mehrere '?' auf-
+//tauchen.. und manche params duerfen nicht mit '=' enden,
+//und sowas halt. ^_^
+```
 
 <br><br>
 
