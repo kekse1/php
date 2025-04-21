@@ -3,7 +3,7 @@
 //
 // Copyright (c) Sebastian Kucharczyk <kuchen@kekse.biz>
 // https://kekse.biz/ https://github.com/kekse1/*******/
-// v0.4.0
+// v0.4.1
 //
 //mit erklaerung: ich wollte das selbst sauber loesen,
 //ohne integrierte php-funktionalitaet. grund: meine
@@ -181,6 +181,11 @@ function isIP($_hostname)
 
 	$_hostname = explode('.', $_hostname);
 	$len = count($_hostname);
+
+	if($len > 4)
+	{
+		return false;
+	}
 
 	for($i = 0; $i < $len; ++$i)
 	{

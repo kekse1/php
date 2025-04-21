@@ -19,7 +19,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <br>
 
 ### News
-* \[**2025-04-21**\] Updated the first/only script [`rewrite`.php](#rewritephp), v**0.4.0**;
+* \[**2025-04-21**\] Updated the first/only script [`rewrite`.php](#rewritephp), v**0.4.1**;
 * \[**2025-04-10**\] Just created this repository.
 
 <br><br>
@@ -49,7 +49,7 @@ both the `?` search and `#` hash parts of the URL in my own way. The `?fbclid` e
 
 So the most important thing this script does is to remove any `?fbclid` and `?gclid` parameter in the URL/Query.
 
-* [Version v**0.4.0**](src/rewrite.php) (updated **2025-04-21**)
+* [Version v**0.4.1**](src/rewrite.php) (updated **2025-04-21**)
 
 ```
 //mit erklaerung: ich wollte das selbst sauber loesen,
