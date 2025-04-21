@@ -44,16 +44,16 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 
 This script cleans and rewrites HTTP querys in some ways which are useful for [**me**](https://github.com/kekse1/v4/).
 
+* [Version v**0.5.0**](src/rewrite.php) (updated **2025-04-21**)
+
 The main reason was: the [JavaScript](https://github.com/kekse1/javascripts/) part of my websites utilizes
 both the `?` search and `#` hash parts of the URL in my own way. The `?fbclid` etc. disturbed my logics.
-
-So the most important thing this script does is to remove any `?fbclid` and `?gclid` parameter in the URL/Query.
-
-* [Version v**0.5.0**](src/rewrite.php) (updated **2025-04-21**)
 
 > [!TIP]
 > Maybe of interest: my own `isIP()`, `isIPv4()` and `isIPv6()` functions.
 > I could have used `filter_var()`, but this ain't that funny. ^_^
+
+So the most important thing this script does is to remove any `?fbclid` and `?gclid` parameter in the URL/Query.
 
 ```
 //mit erklaerung: ich wollte das selbst sauber loesen,
