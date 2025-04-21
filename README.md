@@ -19,7 +19,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <br>
 
 ### News
-* \[**2025-04-21**\] Updated the first/only script [`rewrite`.php](#rewritephp), v**0.4.2**;
+* \[**2025-04-21**\] Updated the first/only script [`rewrite`.php](#rewritephp), v**0.5.0**;
 * \[**2025-04-10**\] Just created this repository.
 
 <br><br>
@@ -49,7 +49,11 @@ both the `?` search and `#` hash parts of the URL in my own way. The `?fbclid` e
 
 So the most important thing this script does is to remove any `?fbclid` and `?gclid` parameter in the URL/Query.
 
-* [Version v**0.4.2**](src/rewrite.php) (updated **2025-04-21**)
+* [Version v**0.5.0**](src/rewrite.php) (updated **2025-04-21**)
+
+> [!TIP]
+> Maybe of interest: my own `isIP()`, `isIPv4()` and `isIPv6()` functions.
+> I could have used `filter_var()`, but this ain't that funny. ^_^
 
 ```
 //mit erklaerung: ich wollte das selbst sauber loesen,

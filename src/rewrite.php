@@ -3,7 +3,7 @@
 //
 // Copyright (c) Sebastian Kucharczyk <kuchen@kekse.biz>
 // https://kekse.biz/ https://github.com/kekse1/*******/
-// v0.4.2
+// v0.5.0
 //
 //mit erklaerung: ich wollte das selbst sauber loesen,
 //ohne integrierte php-funktionalitaet. grund: meine
@@ -167,16 +167,37 @@ function removeSubDomains($_host = null, $_count = 2, $_status = false)
 }
 
 //
-//maybe: `filter_var($_hostname, FILTER_VALIDATE_IP)`
+//maybe: `filter_var($_hostname, FILTER_VALIDATE_IP)`;
+//BUT i wanted to do it on my own. ^_^
+//but maybe i forgot about other radix/base @ ip addresses!? xD~
 //
 function isIP($_hostname)
 {
-	if(str_contains($_hostname, ':'))
+	if(isIPv4($_hostname))
 	{
-		if($_hostname[0] === '[' && $_hostname[strlen($_hostname) - 1] === ']')
-		{
-			return true;
-		}
+		return true;
+	}
+
+	if(isIPv6($_hostname))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+function isIPv4($_hostname)
+{
+	if(!is_string($_hostname))
+	{
+		return false;
+	}
+	
+	$len = strlen($_hostname);
+	
+	if($len === 0 || $len > 15)
+	{
+		return false;
 	}
 
 	$_hostname = explode('.', $_hostname);
@@ -195,7 +216,75 @@ function isIP($_hostname)
 		{
 			return false;
 		}
-		else if(!is_numeric($_hostname[$i]))
+
+		//is_numeric() would work, too?!
+		if(!ctype_digit($_hostname[$i]))
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function isIPv6($_hostname)
+{
+	if(!is_string($_hostname))
+	{
+		return false;
+	}
+
+	$len = strlen($_hostname);
+
+	if($_hostname[0] === '[' && $_hostname[$len - 1] === ']')
+	{
+		$_hostname = substr($_hostname, 1, $len - 2);
+		$len -= 2;
+	}
+
+	if($len <= 0)
+	{
+		return false;
+	}
+
+	$_hostname = explode(':', $_hostname);
+	$len = count($_hostname);
+
+	if($len > 8 || $len < 1)
+	{
+		return false;
+	}
+
+	$emptyCount = 0;
+	$embedCount = 0;
+
+	for($i = 0; $i < $len; ++$i)
+	{
+		$l = strlen($_hostname[$i]);
+
+		if($l === 0)
+		{
+			if(++$emptyCount > 2)
+			{
+				return false;
+			}
+		}
+		else if($l > 15)
+		{
+			return false;
+		}
+		else if(isIPv4($_hostname[$i]))
+		{
+			if(++$embedCount > 1)
+			{
+				return false;
+			}
+		}
+		else if($l > 4)
+		{
+			return false;
+		}
+		else if(!ctype_xdigit($_hostname[$i]))
 		{
 			return false;
 		}
