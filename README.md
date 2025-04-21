@@ -53,7 +53,7 @@ both the `?` search and `#` hash parts of the URL in my own way. The `?fbclid` e
 > Maybe of interest: my own `isIP()`, `isIPv4()` and `isIPv6()` functions.
 > I could have used `filter_var()`, but this ain't that funny. ^_^
 
-So the most important thing this script does is to remove any `?fbclid` and `?gclid` parameter in the URL/Query.
+So the **most important thing this script does** is to remove any `?fbclid` and `?gclid` parameter in the URL/Query.
 
 ```
 //mit erklaerung: ich wollte das selbst sauber loesen,
