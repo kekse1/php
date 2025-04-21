@@ -166,6 +166,9 @@ function removeSubDomains($_host = null, $_count = 2, $_status = false)
 	return [ $result, $result !== $original ];
 }
 
+//
+//maybe: `filter_var($_hostname, FILTER_VALIDATE_IP)`
+//
 function isIP($_hostname)
 {
 	if(str_contains($_hostname, ':'))
