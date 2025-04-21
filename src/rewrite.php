@@ -250,7 +250,7 @@ function isIPv6($_hostname)
 	$_hostname = explode(':', $_hostname);
 	$len = count($_hostname);
 
-	if($len > 8 || $len < 1)
+	if($len > 8 || $len === 0)
 	{
 		return false;
 	}
