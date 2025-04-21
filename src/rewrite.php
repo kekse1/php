@@ -3,7 +3,7 @@
 //
 // Copyright (c) Sebastian Kucharczyk <kuchen@kekse.biz>
 // https://kekse.biz/ https://github.com/kekse1/*******/
-// v0.3.0
+// v0.4.0
 //
 //mit erklaerung: ich wollte das selbst sauber loesen,
 //ohne integrierte php-funktionalitaet. grund: meine
@@ -166,6 +166,30 @@ function removeSubDomains($_host = null, $_count = 2, $_status = false)
 	return [ $result, $result !== $original ];
 }
 
+function isIP($_hostname)
+{
+	if(str_contains($_hostname, ':'))
+	{
+		if($_hostname[0] === '[' && $_hostname[strlen($_hostname) - 1] === ']')
+		{
+			return true;
+		}
+	}
+
+	$_hostname = explode('.', $_hostname);
+	$len = count($_hostname);
+
+	for($i = 0; $i < $len; ++$i)
+	{
+		if(!is_numeric($_hostname[$i]))
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
 //
 function rewrite($_code = 307)
 {
@@ -183,11 +207,7 @@ function rewrite($_code = 307)
 	{
 		$HTTPS = false;
 	}
-	else if(str_starts_with($HOST, '127.'))
-	{
-		$HTTPS = false;
-	}
-	else if($HOST === '[::1]')
+	else if(isIP($HOST))
 	{
 		$HTTPS = false;
 	}
