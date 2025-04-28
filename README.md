@@ -13,7 +13,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 > [!NOTE]
 > Since this repository has just been created, I didn't already collected
 > so much scripts for here (even if I created really a mass of them..).
-> So this one will hopefully grow in time (today my heart doesn't beats
+> So this one will hopefully grow in time (today my heart doesn't beat
 > so much for PHP than before ~20 years...)!
 
 <br>
