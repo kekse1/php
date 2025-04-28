@@ -3,9 +3,8 @@
 <br>
 
 # PHP
-Many, many years ago I was a Moderator (and l8rs even a "Technical Administrator")
-in the PHP area of the "Buschhacker" forum (doesn't exist any longer today).
-Maybe I didn't forget *that* much about PHP!?
+Many, many years ago I was a Moderator in the PHP area of the "Buschhacker" forum,
+l8rs even a "Technical Administrator". So maybe I didn't forget *that* much about PHP!?
 
 Since I just wrote another `.php` script for [my **website**](https://kekse.biz/)
 and I hadn't a repository for it, I created this new one. That's the reason.
