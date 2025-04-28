@@ -19,6 +19,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <br>
 
 ### News
+* \[**2025-04-28**\] First 'useful' script: [**`curl`.php**](#curlphp), v**0.1.2**;
 * \[**2025-04-21**\] Updated the first/only script [`rewrite`.php](#rewritephp), v**0.5.0**;
 * \[**2025-04-10**\] Just created this repository.
 
@@ -33,9 +34,16 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 
 <br><br><br>
 
-## PHP scripts
+### `curl.php`
+<a href="src/curl.php">
+<img id="curlphp" src="https://kekse.biz/github.php?override=github:php&draw&angle=3&size=56&fg=140,130,20&font=OpenSans&ro&readonly&v=48&h=48&text=%60curl.php%60" />
+</a>
 
-<br>
+Example for HTTP requests in PHP via the cURL Library.
+
+* [Version v**0.1.2**](src/curl.php) (created **2025-04-28**)
+
+<br><br>
 
 ### `rewrite.php`
 <a href="src/rewrite.php">
