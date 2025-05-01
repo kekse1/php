@@ -18,8 +18,8 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 <br>
 
 ### News
+* \[**2025-05-01**\] Fixed a bug in [`rewrite`.php](#rewritephp), v**0.5.1**;
 * \[**2025-04-28**\] First 'useful' script: [**`curl`.php**](#curlphp), v**0.1.2**;
-* \[**2025-04-21**\] Updated the first/only script [`rewrite`.php](#rewritephp), v**0.5.0**;
 * \[**2025-04-10**\] Just created this repository.
 
 <br><br>
@@ -52,7 +52,7 @@ Example for HTTP requests in PHP via the cURL Library.
 
 This script cleans and rewrites HTTP querys in some ways which are useful for [**me**](https://github.com/kekse1/v4/).
 
-* [Version v**0.5.0**](src/rewrite.php) (updated **2025-04-21**)
+* [Version v**0.5.1**](src/rewrite.php) (updated **2025-05-01**)
 
 The main reason was: the [JavaScript](https://github.com/kekse1/javascripts/) part of my websites utilizes
 both the `?` search and `#` hash parts of the URL in my own way. The `?fbclid` etc. disturbed my logics.

@@ -3,7 +3,7 @@
 //
 // Copyright (c) Sebastian Kucharczyk <kuchen@kekse.biz>
 // https://kekse.biz/ https://github.com/kekse1/*******/
-// v0.5.0
+// v0.5.1
 //
 //mit erklaerung: ich wollte das selbst sauber loesen,
 //ohne integrierte php-funktionalitaet. grund: meine
@@ -305,6 +305,7 @@ function rewrite($_code = 307)
 	//
 	$HTTPS = true;
 	$HOST = strtolower($_SERVER['HTTP_HOST']);
+	$isIP = false;
 
 	if($HOST === 'localhost')
 	{
@@ -312,6 +313,7 @@ function rewrite($_code = 307)
 	}
 	else if(isIP($HOST))
 	{
+		$isIP = true;
 		$HTTPS = false;
 	}
 
@@ -320,7 +322,17 @@ function rewrite($_code = 307)
 	$ORIGINAL_QUERY = $_SERVER['QUERY_STRING'];
 	$ORIGINAL_HOST = $_SERVER['HTTP_HOST'];
 
-	$HOST = removeSubDomains($ORIGINAL_HOST, 2, false);
+	$HOST;
+
+	if($isIP)
+	{
+		$HOST = $ORIGINAL_HOST;
+	}
+	else
+	{
+		$HOST = removeSubDomains($ORIGINAL_HOST, 2, false);
+	}
+
 	$QUERY = removeClicks($ORIGINAL_QUERY, false);
 
 	if($HTTPS && $_SERVER['HTTPS'] !== 'on')
