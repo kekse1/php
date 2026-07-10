@@ -1,13 +1,15 @@
 <img src="https://kekse.biz/github.php?draw&override=github:php" />
 
-<br>
-
 # PHP
 Many, many years ago I was a Moderator in the PHP area of the "Buschhacker" forum,
 l8rs even a "Technical Administrator". So maybe I didn't forget *that* much about PHP!?
 
+<br>
+
 Since I just wrote another `.php` script for [my **website**](https://kekse.biz/)
 and I hadn't a repository for it, I created this new one. That's the reason.
+
+<br>
 
 > [!NOTE]
 > Since this repository has just been created, I didn't already collected
@@ -15,7 +17,7 @@ and I hadn't a repository for it, I created this new one. That's the reason.
 > So this one will hopefully grow in time (today my heart doesn't beat
 > so much for PHP than before ~20 years...)!
 
-<br>
+<br><br>
 
 ### News
 * \[**2025-05-01**\] Fixed a bug in [`rewrite`.php](#rewritephp), v**0.5.1**;
@@ -73,10 +75,12 @@ So the **most important thing this script does** is to remove any `?fbclid` and 
 //und sowas halt. ^_^
 ```
 
-<br><br>
+<br><br><br>
 
 # Contact
 <img src="https://kekse.biz/github.php?override=github:php&draw&text=php@kekse.biz&angle=6&size=38pt&fg=150,20,90&font=OpenSans&ro&readonly&h=64&v=16" />
+
+<br>
 
 # Copyright and License
 The Copyright is [(c) Sebastian Kucharczyk](./COPYRIGHT.txt),
